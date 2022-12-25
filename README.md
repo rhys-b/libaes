@@ -4,10 +4,10 @@ A C implementation of the 128-bit Advanced Encryption Standard.
 
 Function documentation is in `aes.h`, however the most important function is `crypt()`:
 
-## crypt()
+## edcrypt()
 
 ```c
-int crypt( bool encrypt, uint8_t *data, uint32_t size, const char *password );
+int edcrypt( bool encrypt, uint8_t *data, uint32_t size, const char *password );
 ```
 
 Encrypts or decrypts the data at the `data` pointer using the given password. If the `encrypt` flag is `true`, then the data is encrypted but if the flag is `false` then the data is decrypted.
