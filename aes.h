@@ -9,6 +9,10 @@
 #ifndef AES_H
 #define AES_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 
 #include <string.h>
 #include <stdint.h>
@@ -134,6 +138,10 @@ void create_key(uint8_t key[16], const char *password);
  * 128 bits at a time. The encrypted data is stored into the same buffer
  * the original data was provided in. The buffer must be a multiple of 128 bits.
  * Return 0 on success and -1 if the data was not encrypted. */
-int crypt(bool encrypt, uint8_t *data, uint32_t size, const char *password);
+int edcrypt(bool encrypt, uint8_t *data, uint32_t size, const char *password);
+
+#ifdef __cplusplus
+} /* extern C */
+#endif
 
 #endif /* AES_H */
