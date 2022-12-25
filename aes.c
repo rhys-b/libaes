@@ -179,7 +179,7 @@ void create_key(uint8_t key[16], const char *password)
 	}
 }
 
-int crypt(bool encrypt, uint8_t *data, uint32_t size, const char *password)
+int edcrypt(bool encrypt, uint8_t *data, uint32_t size, const char *password)
 {
 	if (size % 16 != 0) return -1;
 
